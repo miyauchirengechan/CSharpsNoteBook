@@ -1,0 +1,83 @@
+using System;
+using System.Reflection.Metadata;
+
+namespace CsharpMXc
+{
+    #region 知识回顾
+    
+    /*
+    类和对象
+    申明类
+    Class Robot
+    {
+    
+    }
+    
+    */
+    
+    #endregion
+    
+    #region 成员变量
+
+    //申明在类语句块中
+    //用来描述对象的特征
+    //可以是任意变量类型
+    //数量不做限制
+    //是否赋值根据需求来决定
+
+    enum e_sex
+    {
+        Male,
+        Famale
+    }
+    struct Position
+    {
+        
+    }
+
+    class pet
+    {}
+    class MxPerson
+    {
+        public string name = "JacksonTan"; //姓名 //可以不用初始化
+        public int age = 10; //年龄 //可以不用初始化
+        public char sex = 'f'; //char型 //
+        public e_sex Male;
+        public MxPerson GirlFriend; //不赋值是null。 Struct 不允许在自己同名 Struct 中声明同名变量。
+        //声明 与 自己类 相同的成员变量时不能对其进行初始化（实例化）如上⬆⬆⬆ new MxPerson(); //俄罗斯套娃 递归
+        public MxPerson[] BoyFriend; 
+        public Position area;
+        public pet cpet;
+        
+        //null;
+        
+    }
+
+    #endregion
+
+    #region 成员变量的使用和初始值
+    
+    
+    
+    #endregion
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MxPerson mxpa = new MxPerson();
+            
+            //值类型 默认 0
+            //bool布尔值 默认 false
+            //引用类型 默认 null;
+            //char 默认 空字符''; //null
+            
+            Console.WriteLine(default(bool)); //什么都打印不出来
+            
+            //使用
+
+            mxpa.age = 10;
+            Console.WriteLine(mxpa.age);
+        }
+    }
+}
