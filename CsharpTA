@@ -1,0 +1,42 @@
+using System;
+using System.Data;
+using System.Runtime.InteropServices;
+
+namespace CsharpTa
+{
+    class GameObject
+    {
+        
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region A
+            //机器：机器人、机器、汽车、飞机
+            //人：张阿姨、老王、人
+            //动物：猫、人、张阿姨、隔壁老王
+            //植物：向日葵、菊花、荷花
+            //星球：太阳、星星
+            #endregion
+
+            #region B
+
+            /*
+            GameObject A = new GameObject();
+            GameObject B = A;
+            B = null;
+            //A是GameObject 不是null;
+            */
+
+            GameObject A = new GameObject();
+            GameObject B = A;
+            B = new GameObject();
+            //A和B没有关系
+
+            #endregion
+
+        }
+    }
+}
